@@ -97,6 +97,21 @@ body{
     display: flex;
     flex-direction: column;
 } */
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    color:#f3b10b;
+}
+a:focus{
+    color: var(--grey);
+}
+
 .container {
     max-width: 1168px;
     width: 100%;
@@ -312,8 +327,7 @@ body{
     line-height: 20px;
     margin-bottom: 25px;
 } 
-.read-more__block{
-    max-width: 153px;
+.read-more__btn{
     min-height: 42px;
     background-color: var(--white);
     border: none;
@@ -322,6 +336,19 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+.read-more__btn:hover{
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+.read-more__btn:active{
+    transform: scale(0.9);
+    transition: all 0.3s ease 0s;
+}
+.read-more__btn:focus{
+    outline: 3px solid #f3b10b;
 }
 .read-more__icon{
     width: 26px;
@@ -417,6 +444,10 @@ body{
     width: 50%;
 }
  
+.tools__btn-container{
+    display: flex;
+}
+
 .tools__image img{
     max-width: 100%;
 }
@@ -427,14 +458,17 @@ body{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 2px;
+    margin-bottom: 6px;
 }  
 .tools__title{
     font-size: 28px;
     line-height: 32px;
+    margin-bottom: 14px;
 }  
 .tools__regular-text{
     font-size: 14px;
     line-height: 20px;
+    margin-bottom: 20px;
 }  
 .read-more__text{
     color: var(--black-regular);
@@ -602,11 +636,9 @@ body{
     background-color: var(--white);
     border: none;
     border-radius: 12px;
-    
 } 
-/* .form{
-
-} */
+.form{
+}
  /*Need to fix form. Make it responsible  */
 input[type=email]{
     margin: 0px;
@@ -616,9 +648,12 @@ input[type=email]{
     border-radius: 12px;
 }
 
+.form__submit button{
+}
+
 @media (max-width: 992px){
     input[type=email]{
-        width: 360px;
+        width: 210px;
     }
 }
 
@@ -633,7 +668,22 @@ input[type=email]{
     color: var(--white);
     border-radius: 11px;
     border: none;
-} 
+}
+
+.form__submit:hover{
+    cursor: pointer;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+.form__submit:active{
+    transform: scale(0.9);
+    transition: all 0.3s ease 0s;
+}
+.form__submit:focus{
+    outline: 3px solid #f3b10b;
+
+}
 
 .footer__bottom{
     padding: 56px 0px 0px 0px;
