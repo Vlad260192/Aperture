@@ -93,10 +93,10 @@ body{
     background-color: var(--black-regular);
 }
 
-/* .wrapper {
+.wrapper {
     display: flex;
     flex-direction: column;
-} */
+}
 
 a:link{
     text-decoration: none;
@@ -161,8 +161,6 @@ a:focus{
     display: none;
 }
 
-/* .header__menu {} */
-
 .header__list {
     display: flex;
     position: relative;
@@ -193,8 +191,14 @@ a:focus{
     min-height: 90vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
+.studio-wrapper{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
 .studio__heading {
     display: flex;
     flex-direction: column;
@@ -278,9 +282,6 @@ a:focus{
     margin-bottom: 20px;
     text-transform: uppercase;
 }
-/* .what__body{
-
-}  */
 .what__row{
     display: flex;
     flex-flow: row wrap;
@@ -319,9 +320,6 @@ a:focus{
     min-height: 600px;
     padding: 30px;
 } 
-/* .regular-text{
-
-}  */
 .what__text{
     font-size: 14px;
     line-height: 20px;
@@ -367,10 +365,6 @@ a:focus{
     margin: 0px 0px 0px 0px;
 } 
 
-/* .works{
-
-} */
-
 .photo__bg-wrapper{
     min-height: 600px;
     position: relative;
@@ -399,8 +393,13 @@ a:focus{
     align-items: flex-end;
     flex-direction: column;
     min-height: 600px;
+    position: relative;
 }
-
+.photo-wrapper{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
 .photo__heading{
     display: flex;
     flex-direction: column;
@@ -443,7 +442,6 @@ a:focus{
     justify-content: center;
     width: 50%;
 }
- 
 .tools__btn-container{
     display: flex;
 }
@@ -451,9 +449,6 @@ a:focus{
 .tools__image img{
     max-width: 100%;
 }
-/* .tools__photo-options{
-    
-} */
 .tools__sub-title{
     font-size: 14px;
     line-height: 20px;
@@ -473,13 +468,8 @@ a:focus{
 .read-more__text{
     color: var(--black-regular);
 } 
-
-/* .clients{
-
-}   */
 .clients__block{
     padding: 112px 0px 140px;
-
 } 
 .clients__heading{
     display: flex;
@@ -496,9 +486,6 @@ a:focus{
     font-size: 24px;
     line-height: 30px;
 } 
-/* .clients__content{
-
-}  */
 .clients__row{
     display: flex;
     flex-direction: row;
@@ -516,8 +503,6 @@ a:focus{
     max-width: 100%;
     height: auto;
 }
-/* .help{}  */
-
 .help__block{
     padding: 113px 0px;
 } 
@@ -604,11 +589,9 @@ a:focus{
     font-weight: 400;
     line-height: 20px;
 } 
-
 .footer__body{
     padding: 40px 0px 36px;
     border-bottom: 2px solid var(--white);
-
 } 
 .footer__row{
     display: flex;
@@ -637,10 +620,7 @@ a:focus{
     border: none;
     border-radius: 12px;
 } 
-.form{
-}
- /*Need to fix form. Make it responsible  */
-input[type=email]{
+input{
     margin: 0px;
     padding: 15px;
     width: 500px;
@@ -648,19 +628,12 @@ input[type=email]{
     border-radius: 12px;
 }
 
-.form__submit button{
-}
-
 @media (max-width: 992px){
-    input[type=email]{
+    input{
         width: 210px;
     }
 }
 
-/* .form__input{
-    
-
-}  */
 .form__submit{
     padding: 5px 5px 4px;
     margin: 0px 10px;
@@ -669,7 +642,6 @@ input[type=email]{
     border-radius: 11px;
     border: none;
 }
-
 .form__submit:hover{
     cursor: pointer;
     text-decoration: none;
@@ -682,35 +654,24 @@ input[type=email]{
 }
 .form__submit:focus{
     outline: 3px solid #f3b10b;
-
 }
-
 .footer__bottom{
     padding: 56px 0px 0px 0px;
-
 } 
 .footer__bottom-row{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 } 
-/* .footer__bottom-copyring{
-
-} */
 .footer__bottom-copyring span{
     color: var(--grey);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
 } 
-/* .footer__bottom-socials{
-
-}  */
 .footer__socials-row{
     display: flex;
     justify-content: end;
-
 } 
 .footer__socials-icon{
     margin: 0px 10px;
@@ -761,7 +722,6 @@ input[type=email]{
     }
     .header__burger.active span{
         transform: scale(0);
-
     }
     .header__burger.active::before{
         transform: rotate(45deg);
@@ -782,25 +742,21 @@ input[type=email]{
         transition: all 0.3s ease 0s;
         overflow: auto;
     }
-
     .header__menu.active{
         top: 0px;
     }
     .header__list{
         display: block;
     }
-
     .header__list li{
         margin: 0px 0px 20px 0px;
     }
     .header__link{
         font-size: 24px;
     }
-
     .main {
         padding: 60px 0px 0px 0px;
     }
-
     .studio__block {
         align-items: center;
     }
@@ -818,7 +774,6 @@ input[type=email]{
         padding: 0 8px;
         margin: 8px 0;   
     }
-
     .tools__body{
         margin: 0 auto;
     }
@@ -847,8 +802,8 @@ input[type=email]{
     .footer__news{
         margin-bottom: 40px;
     }
-
 }
+
 @media (min-width: 767px) {
     .tools{
         display: flex;
@@ -862,7 +817,6 @@ input[type=email]{
         padding: 0 0 45% 0;
         transform: translate(-100%, 0px);
     }
-
     .tools__image img{
         position: absolute;
         width: 100%;
@@ -871,7 +825,6 @@ input[type=email]{
         left: 0px;
         object-fit: cover;
     }
-    
 }
 
 
