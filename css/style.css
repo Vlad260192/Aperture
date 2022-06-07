@@ -673,7 +673,12 @@ input{
     display: flex;
     justify-content: end;
 } 
+.footer__socials-link{
+    display: flex;
+}
 .footer__socials-icon{
+    flex: 0 0 24px;
+    height: 24px;
     margin: 0px 10px;
 } 
 
@@ -746,10 +751,12 @@ input{
         top: 0px;
     }
     .header__list{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .header__list li{
-        margin: 0px 0px 20px 0px;
+        margin: 30px 0px 30px 0px;
     }
     .header__link{
         font-size: 24px;
@@ -801,6 +808,34 @@ input{
     }
     .footer__news{
         margin-bottom: 40px;
+    }
+
+    .footer__heading-row{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__heading-logo{
+        margin-bottom: 30px;
+    }
+
+    .footer__heading-info-row{
+        flex-direction: column;
+    }
+
+    .footer__heading-info-col li{
+        margin: 10px 0px 10px 0px;
+    }
+
+    .footer__bottom-row{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__bottom-copyring span{
+        display: block;
+        margin-bottom: 20px;
     }
 }
 
